@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <!-- Icono de lupa (Font Awesome) -->
+    <title>Super Depósito la 64</title>
+  </head>
+  <body>
+    <div class="superContenedor">
+      <a href="../index.html"><div class="logo"></div></a>
+      <div class="contenedorMenuLogo">
+        <nav>
+          <ul>
+            <li>
+              <a class="menuBoton" href="registroClientes.html">Clientes</a>
+            </li>
+            <li><a class="menuBoton" href="inventario.html">Invetarios</a></li>
+            <li><a class="menuBoton" href="proveedore.html">Proveedores</a></li>
+            <li>
+              <a class="menuBoton" href="registroCompras.html">Compras</a>
+            </li>
+            <li><a class="menuBoton" href="ventas.html">Ventas</a></li>
+            <li>
+              <a class="menuBoton" href="generarInformes.html">Informes</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="contTituloRegistro">Inventario depósito la 64</div>
+      <div class="contBuscaAgrega">
+        <!-- Contenedor del input -->
+        <div class="input-container-producto">
+          <!-- Icono de búsqueda OJO esta linkeado-->
+          <i class="fas fa-search input-icon"></i>
+          <!-- Input de búsqueda -->
+          <input type="text" class="input-field" placeholder="Buscar Producto" />
+        </div>
+
+        <div class="contbotonylogo">
+          <div class="botonEicono">Buscar</div>
+        </div>
+      </div>
+      <div class="contenedorInventario">
+        <div class="cont-slider">
+          <h3 class="tituloSlider">Productos</h3>
+          <div class="tabla-productos">
+            <table>
+              <tbody>
+                <tr>
+                  <td>Cervezas</td>
+                </tr>
+                <!-- Aquí van los 30 registros de productos -->
+                <tr>
+                  <td>Conservas</td>
+                </tr>
+                <tr>
+                  <td>Aseo personal</td>
+                </tr>
+                <tr>
+                  <td>Gaseosas</td>
+                </tr>
+                <tr>
+                  <td>Comida enlatada</td>
+                </tr>
+                <tr>
+                  <td>Arroz</td>
+                </tr>
+                <tr>
+                  <td>Frijol</td>
+                </tr>
+                <tr>
+                  <td>Lentejas</td>
+                </tr>
+                <tr>
+                  <td>Frutas</td>
+                </tr>
+                <tr>
+                  <td>Galletas</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="cont-botonesYtabla">
+          <div class="botonesAgrega">
+            <input
+              id="VentanaVariosPro"
+              type="submit"
+              value="Agrega Varios Productos"
+              class="agregaVarios botonEicono"
+            />
+            <input id="VentanaNuevosPro" type="submit" value="Agrega Nuevo Producto" class="agregaNuevo botonEicono" />
+          </div>
+
+          <div class="tablaInventario">
+            <table class="table-container">
+              <thead>
+                <tr class="cabezaFija">
+                  <th>Producto</th>
+
+                  <th>Código Producto</th>
+
+                  <th>Precio Unidad</th>
+                  <th>Cantidad en stock</th>
+                  <th>Administrar</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Crema colgate Menta 3.75ML</td>
+                  <td>4512421274541325</td>
+                  <td>$8.900</td>
+
+                  <td>81</td>
+                  <td>
+                    <button class="administer-button modificador">Modificar</button>
+                    <button class="administer-button eliminar">Eliminar</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Arroba de arroz</td>
+                  <td>1360877782</td>
+                  <td>$10.400</td>
+
+                  <td>37</td>
+
+                  <td>
+                    <button class="administer-button modificador">Modificar</button>
+                    <button class="administer-button eliminar">Eliminar</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Aceite de 2000 ML</td>
+                  <td>7702116000945</td>
+                  <td>$10.400</td>
+
+                  <td>63</td>
+                  <td>
+                    <button class="administer-button modificador">Modificar</button>
+                    <button class="administer-button eliminar">Eliminar</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Cerveza en lata</td>
+                  <td>542225684544</td>
+                  <td>$15.200</td>
+
+                  <td>19</td>
+                  <td>
+                    <button class="administer-button modificador">Modificar</button>
+                    <button class="administer-button eliminar">Eliminar</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Atún en agua</td>
+                  <td>54555226224</td>
+                  <td>$4.990</td>
+
+                  <td>15</td>
+                  <td>
+                    <button class="administer-button modificador">Modificar</button>
+                    <button class="administer-button eliminar">Eliminar</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Galletas soda</td>
+                  <td>6874654654</td>
+                  <td>$2.500</td>
+
+                  <td>30</td>
+                  <td>
+                    <button class="administer-button modificador">Modificar</button>
+                    <button class="administer-button eliminar">Eliminar</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>yogurt colanta</td>
+                  <td>65454545112</td>
+                  <td>$1.300</td>
+
+                  <td>20</td>
+                  <td>
+                    <button class="administer-button modificador">Modificar</button>
+                    <button class="administer-button eliminar">Eliminar</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="Varios" class="modal">
+      <a class="close botoncierre">x</a>
+      <div class="centroRegistro">
+        <div class="contenedorRegistro">
+          <div class="tituloNuevoUsu">Agregar productos</div>
+          <div class="item">
+            <label>Nombre del producto</label>
+            <input type="text" id="username" name="username" />
+          </div>
+          <div class="item">
+            <label>Costo</label>
+            <input type="text" id="username" name="username" />
+          </div>
+          <div class="item">
+            <label>Precio de Venta</label>
+            <input type="text" id="username" name="username" />
+          </div>
+          <div class="item">
+            <label>Cantidad</label>
+            <input type="number" id="username" name="username" />
+          </div>
+          <div class="item">
+            <label>Proveedor</label>
+            <input type="text" id="username" name="username" />
+          </div>
+          <div class="item">
+            <input type="submit" value="Cancelar Registro" class="cancela" />
+            <input type="submit" value="Registrar" class="registra" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="Nuevos" class="modal2">
+      <a class="close2 botoncierre">x</a>
+      <div class="centroRegistro">
+        <div class="contenedorRegistro">
+          <div class="tituloNuevoUsu">Agregar Nuevo Producto</div>
+          <div class="item">
+            <label>Nombre del producto</label>
+            <input type="text" id="username" name="username" />
+          </div>
+          <div class="item">
+            <label>Costo</label>
+            <input type="text" id="username" name="username" />
+          </div>
+          <div class="item">
+            <label>Precio de Venta</label>
+            <input type="text" id="username" name="username" />
+          </div>
+          <div class="item">
+            <label>Cantidad</label>
+            <input type="number" id="username" name="username" />
+          </div>
+          <div class="item">
+            <label>Proveedor</label>
+            <input type="text" id="username" name="username" />
+          </div>
+          <div class="item">
+            <input type="submit" value="Cancelar Registro" class="cancela1" />
+            <input type="submit" value="Registrar" class="registra" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="Editar" class="modal3">
+      <a class="close3 botoncierre">x</a>
+      <!--close3 es solo para identificarlo y usarlo en javascript-->
+      <div class="centroRegistro">
+        <div class="contenedorRegistro">
+          <div class="tituloNuevoUsu">Editar Producto</div>
+          <div class="item">
+            <label>Nombre del producto</label>
+            <input type="text" id="Nombre" name="Nombre" />
+          </div>
+          <div class="item">
+            <label>Costo</label>
+            <input type="text" id="Costo" name="Costo" />
+          </div>
+          <div class="item">
+            <label>Precio de Venta</label>
+            <input type="text" id="Precio" name="Precio" />
+          </div>
+          <div class="item">
+            <label>Cantidad</label>
+            <input type="number" id="Cantidad" name="Cantidad" />
+          </div>
+          <div class="item">
+            <label>Proveedor</label>
+            <input type="text" id="Proveedor" name="Proveedor" />
+          </div>
+          <div class="item">
+            <input type="submit" value="Cancelar Registro" class="cancela2" />
+            <input type="submit" value="Registrar" class="registra" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      //------------ eventos para las ventanas -------------varios productos------------------------------------------------------
+
+      // Obtener elementos del DOM Obtiene el elemento con id "Varios"
+      var modal = document.getElementById("Varios");
+      // Obtener botón del DOM con el id "VentanaVariosPro"
+      var btn = document.getElementById("VentanaVariosPro");
+      //obtiene el primer elemento del DOM con la clase "close". Esto podría ser un elemento como un botón o un enlace que se utiliza para cerrar el modal.
+      var span = document.getElementsByClassName("close")[0];
+
+      var cancelaRegistroinvent = document.getElementsByClassName("cancela")[0];
+
+      // Cuando se haga clic en el botón, abrir la modal
+      btn.onclick = function () {
+        modal.style.display = "block";
+      };
+
+      // Cuando se haga clic en la "x", cerrar la modal
+      span.onclick = function () {
+        modal.style.display = "none";
+      };
+
+      cancelaRegistroinvent.onclick = function () {
+        modal.style.display = "none";
+      };
+
+      //________________________________ Productos nuevos _________________________________-------------------------------------------------------------ventana 2
+
+      // Obtener elementos del DOM Obtiene el elemento con id "Varios"
+      var modal2 = document.getElementById("Nuevos");
+      // Obtener botón del DOM con el id "VentanaVariosPro"
+      var btn = document.getElementById("VentanaNuevosPro");
+      //obtiene el primer elemento del DOM con la clase "close". Esto podría ser un elemento como un botón o un enlace que se utiliza para cerrar el modal.
+      var span = document.getElementsByClassName("close2")[0];
+
+      var cancelaRegistroinvent2 = document.getElementsByClassName("cancela1")[0];
+
+      // Cuando se haga clic en el botón, abrir la modal
+      btn.onclick = function () {
+        modal2.style.display = "block";
+      };
+
+      // Cuando se haga clic en la "x", cerrar la modal
+      span.onclick = function () {
+        modal2.style.display = "none";
+      };
+
+      cancelaRegistroinvent2.onclick = function () {
+        modal2.style.display = "none";
+      };
+      //__________________________________________editar productos _______________________-------------------------------------------------------ventana Editar
+      var modal3 = document.getElementById("Editar"); // obtener la ventana modal
+      var btn3 = document.querySelectorAll(".modificador"); // selecciona todos, osea btn3 es un array
+      var span3 = document.querySelector("#Editar .close3"); // selecciona solo 1, NO DOS,ENTRA A EL ID Y SELECIONA LA CLASE
+      var botonesEliminar = document.querySelectorAll(".eliminar");
+      var cancelaEditar = document.querySelector(".cancela2"); // Cuando se haga clic en un botón "Modificar", abrir la modal correspondiente
+
+      btn3.forEach(function (botonEditar) {
+        // por cada elemento en el arreglo btn3 ejecute
+        botonEditar.onclick = function () {
+          modal3.style.display = "block";
+        };
+      });
+
+      // Cuando se haga clic en la "x", cerrar la modal
+      function cerrarVentana() {
+        modal3.style.display = "none";
+      }
+
+      span3.onclick = cerrarVentana;
+
+      cancelaEditar.onclick = cerrarVentana;
+
+      //---------------------------------------------------------confirmacion de eliminar producto
+      botonesEliminar.forEach(function (elimina) {
+        elimina.onclick = function () {
+          var respuesta = confirm("¿Estás seguro de que quieres eliminar este producto?");
+          if (respuesta) {
+            alert("Aun no puedes eliminar un producto.");
+          }
+        };
+      });
+    </script>
+  </body>
+</html>

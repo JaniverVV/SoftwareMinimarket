@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <!-- Icono de lupa (Font Awesome) -->
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="superContenedor">
+      <a href="../index.html"><div class="logo"></div></a>
+      <div class="contenedorMenuLogo">
+        <nav>
+          <ul>
+            <li>
+              <a class="menuBoton" href="registroClientes.html">Clientes</a>
+            </li>
+            <li><a class="menuBoton" href="inventario.html">Invetarios</a></li>
+            <li><a class="menuBoton" href="proveedore.html">Proveedores</a></li>
+            <li>
+              <a class="menuBoton" href="registroCompras.html">Compras</a>
+            </li>
+            <li><a class="menuBoton" href="ventas.html">Ventas</a></li>
+            <li>
+              <a class="menuBoton" href="generarInformes.html">Informes</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="containerPrincipalVentas">
+        <div class="containerUno">
+          <div class="contVenta">
+            <!-- Contenedor del input -->
+            <div class="input-container-producto">
+              <!-- Icono de búsqueda OJO esta linkeado-->
+              <i class="fas fa-search input-icon"></i>
+              <!-- Input de búsqueda -->
+              <input
+                type="text"
+                class="input-field"
+                placeholder="Buscar Producto"
+              />
+            </div>
+
+            <div class="contbotonylogo">
+              <div class="botonEicono">Buscar</div>
+            </div>
+          </div>
+          <div class="contTablaVentas">
+            <table class="table-container">
+              <thead>
+                <tr>
+                  <th>Producto</th>
+                  <th>Código Producto</th>
+                  <th>Precio</th>
+                  <th>Cantidad en stock</th>
+                  <th>Descuento</th>
+                  <th>Total</th>
+                  <th>ver Historial</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Registros de ejemplo -->
+                <tr>
+                  <td>Arroba de arroz</td>
+                  <td>243214</td>
+                  <td>$10.400</td>
+                  <td>81</td>
+                  <td>0</td>
+                  <td>$10.400</td>
+                  <td>
+                    <a href="historialVentas.html"
+                      ><button class="administer-button">ver</button></a
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td>Arroba de arroz</td>
+                  <td>243214</td>
+                  <td>$10.400</td>
+                  <td>81</td>
+                  <td>0</td>
+                  <td>$10.400</td>
+                  <td>
+                    <a href="historialVentas.html"
+                      ><button class="administer-button">ver</button></a
+                    >
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="containerDos">
+          <div class="itemVenta preciosVenta">
+            <table>
+              <thead></thead>
+              <tbody class="bordePrecios">
+                <tr>
+                  <td>Articulos</td>
+                  <td>3</td>
+                </tr>
+                <tr>
+                  <td>Subtotal</td>
+                  <td>$26.600</td>
+                </tr>
+                <tr>
+                  <td>Iva 16%</td>
+                  <td>$1.200</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="itemVenta total">Total: $27.800</div>
+          <div class="itemVenta">
+            <label class="lebelFormaPago">Forma de pago</label>
+            <select id="seleccionador">
+              <option value="opcion1">Efectivo</option>
+              <option value="opcion2">Tarjeta</option>
+              <option value="opcion3">Transferencia</option>
+            </select>
+          </div>
+          <div class="itemVenta">
+            <input type="submit" value="Registra pago" class="cancela" />
+          </div>
+          <div class="datosClienteVenta">
+            <div class="subitemVenta">
+              <lebel>Nombre cliente</lebel> <input class="inputVenta" />
+            </div>
+            <div class="subitemVenta">
+              <lebel>Numero de cuenta</lebel>
+              <input class="inputVenta" />
+            </div>
+          </div>
+          <div class="itemVenta">
+            <input type="submit" value="Añadir cliente" class="cancela" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,704 @@
+@font-face {
+  font-family: "MiFuente"; /* Nombre de la primera fuente personalizada */
+  src: url("../fuentes/arial.ttf") format("truetype"); /* Ruta a archivo de fuente */
+}
+
+@font-face {
+  font-family: "MiFuenteItalica"; /* Nombre de la segunda fuente personalizada */
+  src: url("../fuentes/ariali.ttf") format("truetype"); /* Ruta a archivo de fuente */
+}
+
+/*_______________fuentes________________________________________________________________________________*/
+
+body {
+  margin: 0; /*quitar margenes por defecto*/
+  padding: 0;
+  background-image: url("../img/fondo.jpg");
+  background-size: cover; /* imagen cubre el tamaño del div */
+
+  font-family: Arial, sans-serif;
+}
+
+.contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 92vh; /*Altura de la ventana del navegador */
+}
+
+.logo {
+  background-image: url("../img/logo sin fondo.png");
+  position: absolute;
+  background-size: cover;
+  width: 150px;
+  height: 150px;
+  top: 20px;
+  left: 20px;
+  z-index: 1; /* Asegura que el logo esté por encima del cuadro amarillo */
+}
+
+.cuadro-amarillo {
+  width: 320px;
+  height: 300px;
+  background-color: yellow;
+  border-radius: 15px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* sombra paralela */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+label {
+  margin-right: 10px;
+  font-family: "MiFuente";
+  color: #796502;
+}
+
+.lebelFormaPago {
+  color: #080808;
+}
+
+input {
+  border-radius: 10px; /* Ajusta el valor según tus preferencias */
+  padding: 8px; /* Ajusta el relleno según tus preferencias */
+  border: 1px solid #080808; /* Añade un borde para mayor definición */
+
+  font-family: "MiFuente";
+}
+
+a {
+  text-decoration: none;
+}
+
+.olvido {
+  font-family: "MiFuente";
+  color: #635304;
+}
+
+.boton-ingresar,
+.cancela,
+.cancela1,
+.cancela2,
+.registra,
+.cancelaR,
+.registraR,
+.selectFoto,
+.agregaNuevo,
+.agregaVarios {
+  background-color: #a78b00; /* Color de fondo del botón */
+  border: none; /* Sin borde */
+  color: white; /* Color del texto */
+  padding: 8px 40px; /* Relleno interior del botón */
+  text-align: center; /* Alineación del texto */
+  text-decoration: none; /* Sin subrayado */
+  display: inline-block; /* Mostrar como bloque en línea */
+  font-size: 20px; /* Tamaño de fuente */
+  margin: 0px 0px 0px 10px; /* Margen exterior */
+  cursor: pointer; /* Cursor de apuntar */
+  border-radius: 10px; /* Bordes redondeados */
+  transition: background-color 0.3s; /* Transición suave de color de fondo */
+  font-family: "MiFuente";
+  box-shadow: 3px 3px 0px rgba(2, 2, 2, 0.8);
+}
+
+.cancela,
+.cancela1,
+.cancela2,
+.registra,
+.cancelaR,
+.registraR,
+.selectFoto,
+input.agregaNuevo,
+input.agregaVarios {
+  font-size: 11px;
+}
+
+.boton-ingresar:hover {
+  background-color: #ffda33; /* Cambio de color de fondo en hover */
+  color: black;
+}
+
+.flechaVolver {
+  width: 90px;
+  height: 50px;
+  position: fixed;
+}
+
+.flechaVolverHistorial {
+  position: fixed;
+  right: 1vh;
+  top: 100px;
+}
+
+.botonesRegistro {
+  display: flex;
+  width: 100%;
+}
+
+.cancelaR,
+.registraR {
+  width: 90px;
+}
+
+.registroTitulo,
+.tituloNuevoUsu {
+  font-family: "MiFuenteItalica";
+  color: #796502;
+  font-size: 30px;
+  text-align: center;
+  height: 20px;
+  margin: 40px 0 0 0;
+  text-align: center;
+}
+
+.tituloNuevoUsu {
+  margin: 10px 0 30px 0;
+}
+
+.contenedorInput {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.alinear {
+  margin: 5px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 70%;
+}
+
+.cuadro-amarillo-registro {
+  width: 400px;
+  min-height: 400px;
+  background-color: yellow;
+  border-radius: 15px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* sombra paralela */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedor_foto,
+.contenedor_funcion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.centroRegistro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 92vh; /*Altura de la ventana del navegador */
+}
+
+.contenedorRegistro {
+  width: 400px;
+  background-color: yellow;
+  border-radius: 15px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* sombra paralela */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.item {
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  margin: 5px 0 5px 0;
+}
+
+.botoncierre {
+  font-family: "MiFuente";
+  font-size: 40px;
+  position: relative;
+  text-align: center;
+  justify-content: center;
+  top: 25px;
+  right: 150px;
+  float: right;
+  width: 50px; /* Ancho del círculo */
+  height: 50px; /* Altura del círculo */
+  border-radius: 50%;
+  background-color: #a78b00;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+.botoncierre:visited {
+  color: inherit;
+}
+
+/*____________________________________________________________________________________________________________*/
+
+.contenedor-rojo {
+  background-color: rgb(255, 208, 0);
+  display: flex;
+  width: 60%;
+  justify-content: center;
+  flex-wrap: wrap;
+  border-radius: 20px;
+}
+
+.cuadro-azul {
+  width: 120px;
+  height: 150px;
+  margin: 20px 50px 15px 50px;
+}
+
+.textoIcono {
+  font-family: "MiFuente";
+  font-size: 16px;
+  color: #a78b00;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.icono {
+  border-radius: 20px;
+  border: 2px solid #a78b00;
+}
+
+/*_______________MENU________________________________________________________________________________*/
+
+nav {
+  display: inline-flex; /*para que el menu no coja todo el ancho*/
+  justify-content: center;
+  background-color: #a78b00;
+}
+
+ul {
+  list-style-type: none; /* Quitar estilos de la lista */
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: inline-block; /* Mostrar elementos en línea */
+}
+
+.menuBoton {
+  display: inline-block; /* Convertir enlace en bloque para que ocupe todo el ancho */
+  padding: 10px 28px; /* Espacio alrededor del enlace */
+  text-decoration: none; /* Quitar subrayado */
+  color: #fdec00; /* Color del texto */
+  font-family: "MiFuente";
+}
+
+.menuBoton:hover {
+  background-color: #5c4703; /* Cambiar color de fondo al pasar el cursor */
+  color: #ffffff; /* Color del texto */
+}
+
+.superContenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*______________________________________________________________________________________________*/
+
+.contenedorMenuLogo {
+  margin: 20px 0 15px 0;
+}
+
+.registroTitulo {
+  font-family: "MiFuenteItalica";
+  color: #796502;
+  font-size: 30px;
+  text-align: center;
+  height: 50px;
+
+  text-align: center;
+}
+
+/*-----------------------------------------icono lupa y buscar--------------------------------------------------------------------*/
+.input-container {
+  position: relative; /*esto pociciona la lupa*/
+  width: 280px; /* Ancho del input, puedes ajustarlo según tus necesidades */
+  height: 40px;
+}
+
+.input-container-producto {
+  width: 100%;
+  position: relative; /*esto pociciona la lupa*/
+}
+
+/* Estilos para el icono LUPA*/
+.input-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10px; /* Ajusta la posición del icono según tus necesidades */
+  color: #fc0303; /* Color del icono */
+}
+
+/* Estilos para el input */
+.input-field {
+  padding-left: 30px; /* Asegura que el texto no se solape con el icono */
+  width: 100%;
+  height: 40px; /* Altura del input */
+  border: 1px solid #ccc; /* Borde del input */
+  border-radius: 5px; /* Bordes redondeados */
+  box-sizing: border-box; /* Asegura que el padding no afecte al ancho del input */
+}
+
+/* Estilos para el texto dentro del input */
+.input-field::placeholder {
+  color: #aaa; /* Color del texto de marcador de posición */
+}
+
+.contBuscaAgrega,
+.contVenta {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 800px;
+}
+
+.contVenta {
+  width: 100%;
+}
+
+/*-------------------------------------------------------------------------------------------------------------*/
+
+.contTituloRegistro {
+  font-family: "MiFuenteItalica";
+  color: #796502;
+
+  font-size: 30px;
+  margin: 10px 0 0 0;
+  text-align: center;
+}
+
+.botonEicono {
+  background-color: #a78b00; /* Color de fondo del botón */
+  border: none; /* Sin borde */
+  color: white; /* Color del texto */
+  padding: 8px 40px; /* Relleno interior del botón */
+  text-align: center; /* Alineación del texto */
+  text-decoration: none; /* Sin subrayado */
+  display: inline-block; /* Mostrar como bloque en línea */
+  font-size: 20px; /* Tamaño de fuente */
+  margin: 0px 15px 0px 10px; /* Margen exterior */
+  cursor: pointer; /* Cursor de apuntar */
+  border-radius: 10px; /* Bordes redondeados */
+  transition: background-color 0.3s; /* Transición suave de color de fondo */
+  font-family: "MiFuente";
+  box-shadow: 3px 3px 0px rgba(2, 2, 2, 0.8);
+  height: 25px;
+}
+
+.botonEicono:hover {
+  background-color: #ffda33; /* Cambio de color de fondo en hover */
+  color: black;
+}
+
+.contbotonylogo {
+  display: flex;
+  align-items: center;
+}
+
+.contenedorTabla {
+  margin-top: 50px;
+  width: 1200px;
+  overflow-x: auto;
+  background-color: aqua;
+}
+
+/*------------------------------------------TABLA------------------------------------------------------------------*/
+/* Estilos para la tabla */
+.table-container {
+  background-color: pink;
+  border: 1px solid #f77307;
+}
+
+.contTablaVentas {
+  width: 780px;
+  overflow-x: auto; /*si la tabla crece aparece un scroll horizontal*/
+}
+
+.cabezaFija {
+  position: sticky;
+  top: 0; /*sticky hace que se quede fijo un elemento y top que sea desde arriba y cero que sea iniciando 1px */
+  z-index: 1;
+}
+
+.table-container th,
+.table-container td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.table-container th {
+  background-color: orange; /* Fondo naranja para las cabeceras */
+  color: white; /* Letra blanca para las cabeceras */
+}
+
+/* Estilos para los registros */
+.table-container,
+.tabla-productos tr:nth-child(even) {
+  background-color: #f2f2f2; /* Fondo gris claro para filas pares */
+}
+
+.table-container,
+.tabla-productos tr:nth-child(odd) {
+  background-color: white; /* Fondo blanco para filas impares */
+}
+
+/* Estilos para el botón de administrar _______________________________________________________________________________________*/
+.administer-button {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+
+  font-size: 12px;
+  margin-right: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.modal,
+.modal2,
+.modal3 {
+  display: none; /* Oculta la modal por defecto */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente */
+}
+
+/* Estilos para el contenido de la modal */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* Centra la modal verticalmente */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Anchura de la modal */
+}
+
+/*----------------Contenedor Inventario-------------------------------------------------------------------*/
+.contenedorInventario {
+  width: 1050px;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  justify-content: space-between;
+}
+
+.cont-slider {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.cont-botonesYtabla {
+  width: 80%;
+}
+.botonesAgrega {
+  width: 100%;
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+.tablaInventario {
+  width: 110%;
+  height: 300px;
+  overflow-y: scroll; /* Agrega una barra de desplazamiento vertical */
+}
+
+/*----------------- Slider----------------------------*/
+
+.tituloSlider {
+  background-color: #f77307;
+  color: white;
+  margin: 0;
+  text-align: center;
+  padding: 10px 0 10px 0;
+}
+
+.tabla-productos {
+  width: 200px; /* Ancho del contenedor de la tabla */
+  overflow-y: scroll; /* Agrega una barra de desplazamiento vertical */
+  height: 300px; /* Altura máxima del contenedor */
+  border: 1px solid #ff9900;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #ff9900;
+}
+
+tr:hover {
+  background-color: #f2f2f2;
+}
+
+/*-------------------------------------------------------------------------------------------------------------*/
+.containerPrincipalVentas {
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-around;
+  width: 1200px;
+}
+.containerUno {
+  width: 800px;
+  height: 410px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.containerDos {
+  width: 350px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.itemVenta {
+  width: 300px;
+  color: #080808;
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0 10px 0;
+}
+
+.total {
+  padding: 20px 0 20px 0;
+  margin-top: 0;
+  box-sizing: border-box;
+  background-color: #4caf50;
+  font-size: 20px;
+}
+
+.inputVenta {
+  padding: 0;
+  border-radius: 0;
+  width: 110px;
+}
+.subitemVenta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin: 5px;
+}
+.datosClienteVenta {
+  display: flex;
+  font-size: 11px;
+  background-color: #888;
+  border: 1px solid rgb(0, 0, 0);
+}
+
+.preciosVenta {
+  background-color: #fffafa;
+  margin: 0;
+}
+.bordePrecios td {
+  border: 2px solid orange;
+}
+
+.contenedorInformes {
+  width: 1000px;
+  height: 400px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-around;
+}
+
+.iconoInforme {
+  width: 150px;
+  height: 160px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  justify-content: space-around;
+}
+.contImg {
+  width: 130px;
+  height: 130px;
+  border: 2px solid #796502;
+  border-radius: 10px;
+}
+
+.textInform {
+  width: 200px;
+  height: 15px;
+  color: #796502;
+  font-size: 21px;
+  font-family: "MiFuenteItalica";
+}
+
+.textInform:hover {
+  color: #ea5c29;
+}
+
+.contenedorFechasInforme {
+  width: 800px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.fechaInicio,
+.fechaFinal,
+.generador {
+  margin: 80px;
+  margin-top: 10px;
+  font-family: "MiFuenteItalica";
+}
+
+.contDescarga {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.descarga {
+  margin-bottom: 0px;
+  background-color: #4caf50;
+}

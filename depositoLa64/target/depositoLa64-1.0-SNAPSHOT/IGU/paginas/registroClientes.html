@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../css/style.css" rel="stylesheet" />
+    <!-- Icono de lupa (Font Awesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <title>Super Depósito la 64</title>
+  </head>
+  <body>
+    <div class="superContenedor">
+      <a href="../index.html"><div class="logo"></div></a>
+      <div class="contenedorMenuLogo">
+        <nav>
+          <ul>
+            <li>
+              <a class="menuBoton" href="registroClientes.html">Clientes</a>
+            </li>
+            <li><a class="menuBoton" href="inventario.html">Invetarios</a></li>
+            <li><a class="menuBoton" href="proveedore.html">Proveedores</a></li>
+            <li>
+              <a class="menuBoton" href="registroCompras.html">Compras</a>
+            </li>
+            <li><a class="menuBoton" href="ventas.html">Ventas</a></li>
+            <li>
+              <a class="menuBoton" href="generarInformes.html">Informes</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="contTituloRegistro">Registro de Clientes depósito la 64</div>
+
+      <div class="contBuscaAgrega">
+        <!-- Contenedor del input -->
+        <div class="input-container">
+          <!-- Icono de búsqueda  OJO esta linkeado-->
+          <i class="fas fa-search input-icon"></i>
+          <!-- Input de búsqueda -->
+          <input type="text" class="input-field" placeholder="Buscar cliente" />
+        </div>
+
+        <div class="contbotonylogo">
+          <div id="abrirVentana" class="botonEicono">Agregar Cliente</div>
+          <div class="iconoAddC">
+            <div class="icono">
+              <img src="../img/links/registrausuarios.png" width="80" height="80" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contenedorTabla">
+        <table class="table-container">
+          <thead>
+            <tr>
+              <th>Cliente</th>
+              <th>Nombre Completo</th>
+              <th>Teléfono</th>
+              <th>Correo Electrónico</th>
+              <th>Dirección</th>
+              <th>Historial de Compras</th>
+              <th>Puntos de Fidelidad</th>
+              <th>Administrar</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Registros de ejemplo -->
+            <tr>
+              <td>001</td>
+              <td>Juan Pérez González</td>
+              <td>555-1234</td>
+              <td>juan@example.com</td>
+              <td>Calle 123, Ciudad</td>
+              <td>5 compras</td>
+              <td>1000 puntos</td>
+              <td>
+                <button class="administer-button modificar">Modificar</button>
+                <button class="administer-button eliminar">Eliminar</button>
+              </td>
+            </tr>
+            <tr>
+              <td>002</td>
+              <td>Maria López García</td>
+              <td>555-5678</td>
+              <td>maria@example.com</td>
+              <td>Avenida 456, Pueblo</td>
+              <td>3 compras</td>
+              <td>750 puntos</td>
+              <td>
+                <button class="administer-button modificar">Modificar</button>
+                <button class="administer-button eliminar">Eliminar</button>
+              </td>
+            </tr>
+            <tr>
+              <td>003</td>
+              <td>Carlos Sánchez Pérez</td>
+              <td>555-9876</td>
+              <td>carlos@example.com</td>
+              <td>Plaza 789, Villa</td>
+              <td>7 compras</td>
+              <td>1500 puntos</td>
+              <td>
+                <button class="administer-button modificar">Modificar</button>
+                <button class="administer-button eliminar">Eliminar</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- ______________________________esta parte es la ventana modal__________________________________-->
+
+    <div id="myModal" class="modal">
+      <a class="close"><div class="botoncierre">x</div></a>
+      <div class="centroRegistro">
+        <div class="contenedorRegistro">
+          <div class="tituloNuevoUsu">Registro de clientes</div>
+          <div class="item">
+            <label>Nombre Completo</label>
+            <input type="text" id="username" name="username" />
+          </div>
+          <div class="item">
+            <label>Cédula</label>
+            <input type="text" id="username" name="username" />
+          </div>
+          <div class="item">
+            <label>Teléfono</label>
+            <input type="text" id="username" name="username" />
+          </div>
+          <div class="item">
+            <label>Correo electrónico</label>
+            <input type="text" id="username" name="username" />
+          </div>
+          <div class="item">
+            <label>Dirección</label>
+            <input type="text" id="username" name="username" />
+          </div>
+          <div class="item">
+            <input type="submit" value="Cancelar Registro" class="cancela" />
+            <input type="submit" value="Registrar" class="registra" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      // Obtener elementos del DOM
+      var modal = document.getElementById("myModal");
+      var btn = document.getElementById("abrirVentana");
+      var span = document.getElementsByClassName("close")[0]; // cero por que la html colection tiene indices
+      var cancelaRegistro = document.getElementsByClassName("cancela")[0];
+      var modifica = document.querySelectorAll(".modificar");
+      var elimina = document.querySelectorAll(".eliminar");
+
+      function abrirModal() {
+        modal.style.display = "block";
+      }
+
+      btn.onclick = abrirModal;
+
+      modifica.forEach(function (boton) {
+        boton.onclick = abrirModal;
+      });
+
+      // Cuando se haga clic en el botón, abrir la modal
+
+      // Cuando se haga clic en la "x", cerrar la modal
+      span.onclick = function () {
+        modal.style.display = "none";
+      };
+
+      cancelaRegistro.onclick = function () {
+        modal.style.display = "none";
+      };
+
+      elimina.forEach(function (elimina) {
+        elimina.onclick = function () {
+          var respuesta = confirm("¿Estás seguro de que quieres eliminar este Cliente?");
+          if (respuesta) {
+            alert("Aun no puedes eliminar clientes.");
+          }
+        };
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../css/style.css" rel="stylesheet" />
+    <!-- Icono de lupa (Font Awesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <title>Super Depósito la 64</title>
+  </head>
+  <body>
+    <div class="superContenedor">
+      <a href="../index.html"><div class="logo"></div></a>
+      <div class="contenedorMenuLogo">
+        <nav>
+          <ul>
+            <li>
+              <a class="menuBoton" href="registroClientes.html">Clientes</a>
+            </li>
+            <li><a class="menuBoton" href="inventario.html">Invetarios</a></li>
+            <li><a class="menuBoton" href="proveedore.html">Proveedores</a></li>
+            <li>
+              <a class="menuBoton" href="registroCompras.html">Compras</a>
+            </li>
+            <li><a class="menuBoton" href="ventas.html">Ventas</a></li>
+            <li>
+              <a class="menuBoton" href="generarInformes.html">Informes</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="contTituloRegistro">Registro de Proveedores</div>
+
+      <div class="contBuscaAgrega">
+        <!-- Contenedor del input -->
+        <div class="input-container">
+          <!-- Icono de búsqueda  OJO esta linkeado-->
+          <i class="fas fa-search input-icon"></i>
+          <!-- Input de búsqueda -->
+          <input type="text" class="input-field" placeholder="Buscar proveedor" />
+        </div>
+
+        <div class="contbotonylogo">
+          <div id="abrirVentana" class="botonEicono">Agregar Proveedor</div>
+          <div class="iconoAddC">
+            <div class="icono">
+              <img src="../img/links/iconoproveedor.png" width="80" height="80" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contenedorTabla">
+        <table class="table-container">
+          <thead>
+            <tr>
+              <th>Empresa</th>
+              <th>Contacto</th>
+              <th>Teléfono</th>
+              <th>Correo Electrónico</th>
+              <th>Dirección</th>
+              <th>Administrar</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Registros de ejemplo -->
+            <tr>
+              <td>Colombina</td>
+              <td>Juan Pérez González</td>
+              <td>555-1234</td>
+              <td>juan@example.com</td>
+              <td>Calle 123, Ciudad</td>
+
+              <td>
+                ver
+                <button class="administer-button modificar">Modificar</button>
+                <button class="administer-button eliminar">Eliminar</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Coca-Cola</td>
+              <td>Maria López García</td>
+              <td>555-5678</td>
+              <td>maria@example.com</td>
+              <td>Avenida 456, Pueblo</td>
+
+              <td>
+                ver
+                <button class="administer-button modificar">Modificar</button>
+                <button class="administer-button eliminar">Eliminar</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Bimbo</td>
+              <td>Carlos Sánchez Pérez</td>
+              <td>555-9876</td>
+              <td>carlos@example.com</td>
+              <td>Plaza 789, Villa</td>
+
+              <td>
+                ver
+                <button class="administer-button modificar">Modificar</button>
+                <button class="administer-button eliminar">Eliminar</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- ______________________________esta parte es la ventana modal__________________________________-->
+
+    <div id="myModal" class="modal">
+      <a class="close"><div class="botoncierre">x</div></a>
+      <div class="centroRegistro">
+        <div class="contenedorRegistro">
+          <div class="tituloNuevoUsu">Registro de proveedor</div>
+          <div class="item">
+            <label>Empresa</label>
+            <input type="text" id="username" name="username" />
+          </div>
+          <div class="item">
+            <label>Nombre de Encargado</label>
+            <input type="text" id="username" name="username" />
+          </div>
+          <div class="item">
+            <label>Teléfono</label>
+            <input type="text" id="username" name="username" />
+          </div>
+          <div class="item">
+            <label>Correo electrónico</label>
+            <input type="text" id="username" name="username" />
+          </div>
+          <div class="item">
+            <label>Dirección</label>
+            <input type="text" id="username" name="username" />
+          </div>
+          <div class="item">
+            <input type="submit" value="Cancelar Registro" class="cancela" />
+            <input type="submit" value="Registrar" class="registra" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      // Obtener elementos del DOM
+      var modal = document.getElementById("myModal");
+      var btn = document.getElementById("abrirVentana");
+      var span = document.getElementsByClassName("close")[0]; // cero por que es el unico elemento de la coleccion html
+      var cancelaRegistroProvee = document.getElementsByClassName("cancela")[0];
+      var editarRegistroProvee = document.querySelectorAll(".modificar");
+      var botonesEliminar = document.querySelectorAll(".eliminar");
+
+      // Cuando se haga clic en el botón, abrir la modal
+
+      btn.onclick = function () {
+        modal.style.display = "block";
+      };
+
+      editarRegistroProvee.forEach(function (element) {
+        element.onclick = function () {
+          modal.style.display = "block";
+        };
+      });
+
+      // Cuando se haga clic en la "x", cerrar la modal
+
+      function cerrarModal() {
+        modal.style.display = "none";
+      }
+
+      span.onclick = cerrarModal;
+
+      cancelaRegistroProvee.onclick = function () {
+        modal.style.display = "none";
+      };
+
+      botonesEliminar.forEach(function (elimina) {
+        elimina.onclick = function () {
+          var respuesta = confirm("¿Estás seguro de que quieres eliminar este proveedor?");
+          if (respuesta) {
+            alert("Aun no puedes eliminar proveedores.");
+          }
+        };
+      });
+    </script>
+  </body>
+</html>

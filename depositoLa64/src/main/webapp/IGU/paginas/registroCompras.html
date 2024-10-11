@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../css/style.css" rel="stylesheet" />
+    <!-- Icono de lupa (Font Awesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <title>Super Depósito la 64</title>
+  </head>
+  <body>
+    <div class="superContenedor">
+      <a href="../index.html"><div class="logo"></div></a>
+      <div class="contenedorMenuLogo">
+        <nav>
+          <ul>
+            <li>
+              <a class="menuBoton" href="registroClientes.html">Clientes</a>
+            </li>
+            <li><a class="menuBoton" href="inventario.html">Invetarios</a></li>
+            <li><a class="menuBoton" href="proveedore.html">Proveedores</a></li>
+            <li>
+              <a class="menuBoton" href="registroCompras.html">Compras</a>
+            </li>
+            <li><a class="menuBoton" href="ventas.html">Ventas</a></li>
+            <li>
+              <a class="menuBoton" href="generarInformes.html">Informes</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="contTituloRegistro">Registro de Compras</div>
+
+      <div class="contBuscaAgrega">
+        <!-- Contenedor del input -->
+        <div class="input-container">
+          <!-- Icono de búsqueda  OJO esta linkeado-->
+          <i class="fas fa-search input-icon"></i>
+          <!-- Input de búsqueda -->
+          <input type="text" class="input-field" placeholder="Buscar registro de compra" />
+        </div>
+
+        <div class="contbotonylogo">
+          <div id="abrirVentana" class="botonEicono">Registrar Compra</div>
+          <div class="iconoAddC">
+            <div class="icono">
+              <img src="../img/links/comprasicon.png" width="80" height="80" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contenedorTabla">
+        <table class="table-container">
+          <thead>
+            <tr>
+              <th>ID Compra</th>
+              <th>Fecha y Hora</th>
+              <th>Proveedor</th>
+              <th>Correo Electrónico</th>
+              <th>Producto</th>
+              <th>Cantidad</th>
+              <th>Precio Unitario</th>
+              <th>Total</th>
+              <th>Empleado</th>
+              <th>Estado del producto</th>
+              <th>Administrar</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Registros de ejemplo -->
+            <tr>
+              <td>2145</td>
+              <td>20/02/2024</td>
+              <td>Bimbo</td>
+              <td>juan@example.com</td>
+              <td>Pan Blanco</td>
+              <td>20</td>
+              <td>$3.000</td>
+              <td>$60.000</td>
+              <td>Richard R.</td>
+              <td>Excelente</td>
+
+              <td>
+                ver
+                <button class="administer-button modifi">Modificar</button>
+                <button class="administer-button elimi">Eliminar</button>
+              </td>
+            </tr>
+            <tr>
+              <td>2145</td>
+              <td>20/02/2024</td>
+              <td>Bimbo</td>
+              <td>juan@example.com</td>
+              <td>Pan Blanco</td>
+              <td>20</td>
+              <td>$3.000</td>
+              <td>$60.000</td>
+              <td>Richard R.</td>
+              <td>Excelente</td>
+
+              <td>
+                ver
+                <button class="administer-button modifi">Modificar</button>
+                <button class="administer-button elimi">Eliminar</button>
+              </td>
+            </tr>
+            <tr>
+              <td>2145</td>
+              <td>20/02/2024</td>
+              <td>Bimbo</td>
+              <td>juan@example.com</td>
+              <td>Pan Blanco</td>
+              <td>20</td>
+              <td>$3.000</td>
+              <td>$60.000</td>
+              <td>Richard R.</td>
+              <td>Excelente</td>
+
+              <td>
+                ver
+                <button class="administer-button modifi">Modificar</button>
+                <button class="administer-button elimi">Eliminar</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- ______________________________esta parte es la ventana modal__________________________________-->
+
+    <div id="myModal" class="modal">
+      <a class="close"><div class="botoncierre">x</div></a>
+      <div class="centroRegistro">
+        <div class="contenedorRegistro">
+          <div class="tituloNuevoUsu">Registro de Compras</div>
+          <div class="item">
+            <label>Producto</label>
+            <input type="text" id="username" name="username" />
+          </div>
+          <div class="item">
+            <label>Precio</label>
+            <input type="text" id="username" name="username" />
+          </div>
+          <div class="item">
+            <label>Proveedor</label>
+            <input type="text" id="username" name="username" />
+          </div>
+          <div class="item">
+            <label>Cantidad</label>
+            <input type="number" id="username" name="username" />
+          </div>
+          <div class="item">
+            <label>Estado del Producto</label>
+            <select>
+              <option value="opcion1">Excelente</option>
+              <option value="opcion2">Bueno</option>
+              <option value="opcion3">Mal estado</option>
+              <!-- Agrega más opciones si lo deseas -->
+            </select>
+          </div>
+          <div class="item">
+            <input type="submit" value="Cancelar Registro" class="cancela" />
+            <input type="submit" value="Registrar" class="registra" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      // Obtener elementos del DOM
+      var modal = document.getElementById("myModal");
+      var btn = document.getElementById("abrirVentana");
+      var span = document.getElementsByClassName("close")[0];
+      var cancelaRegistroCompras = document.getElementsByClassName("cancela")[0];
+      var mod = document.querySelectorAll(".modifi");
+      var botonesEliminar = document.querySelectorAll(".elimi");
+
+      mod.forEach(function (boton) {
+        boton.onclick = function () {
+          modal.style.display = "block";
+        };
+      });
+
+      // Cuando se haga clic en el botón, abrir la modal
+      btn.onclick = function () {
+        modal.style.display = "block";
+      };
+
+      // Cuando se haga clic en la "x", cerrar la modal
+      span.onclick = function () {
+        modal.style.display = "none";
+      };
+
+      cancelaRegistroCompras.onclick = function () {
+        modal.style.display = "none";
+      };
+
+      botonesEliminar.forEach(function (elimina) {
+        elimina.onclick = function () {
+          var respuesta = confirm("¿Estás seguro de que quieres eliminar este registro?");
+          if (respuesta) {
+            alert("Aun no puedes eliminar un registro.");
+          }
+        };
+      });
+    </script>
+  </body>
+</html>
